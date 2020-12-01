@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="fonts_demo.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts_demo="clr-namespace:fonts_demo">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style ApplyToDerivedTypes="true" TargetType="Label">
+                <Setter Property="FontFamily" Value="{x:Static fonts_demo:AppFont.Regular}" />
+                <!--<Style.Triggers>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}" />
+                    </Trigger>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource PrimaryBoldFont}" />
+                    </Trigger>
+                </Style.Triggers>
+                <Setter Property="TextColor" Value="Black" />-->
+            </Style>
+
+            <Color x:Key="Primary">#2196F3</Color>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
